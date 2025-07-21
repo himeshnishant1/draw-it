@@ -1,93 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Application</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Drawing Application</h1>
-            <div class="header-controls">
-                <button id="saveBtn" class="btn btn-primary">Save Drawing</button>
-                <button id="loadBtn" class="btn btn-secondary">Load Drawing</button>
-                <button id="clearBtn" class="btn btn-danger">Clear Canvas</button>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <div class="toolbar">
-                <div class="tool-section">
-                    <h3>Drawing Tools</h3>
-                    <div class="tool-buttons">
-                        <button id="selectTool" class="tool-btn active" data-tool="select">
-                            <span class="tool-icon">👆</span>
-                            Select
-                        </button>
-                        <button id="rectangleTool" class="tool-btn" data-tool="rectangle">
-                            <span class="tool-icon">⬜</span>
-                            Rectangle
-                        </button>
-                        <button id="circleTool" class="tool-btn" data-tool="circle">
-                            <span class="tool-icon">⭕</span>
-                            Circle
-                        </button>
-                        <button id="lineTool" class="tool-btn" data-tool="line">
-                            <span class="tool-icon">➖</span>
-                            Line
-                        </button>
-                        <button id="freeDrawTool" class="tool-btn" data-tool="freedraw">
-                            <span class="tool-icon">✏️</span>
-                            Free Draw
-                        </button>
-                    </div>
-                </div>
-
-                <div class="tool-section">
-                    <h3>Properties</h3>
-                    <div class="property-group">
-                        <label for="fillColor">Fill Color:</label>
-                        <input type="color" id="fillColor" value="#ff6b6b">
-                    </div>
-                    <div class="property-group">
-                        <label for="strokeColor">Stroke Color:</label>
-                        <input type="color" id="strokeColor" value="#2c3e50">
-                    </div>
-                    <div class="property-group">
-                        <label for="lineWidth">Line Width:</label>
-                        <input type="range" id="lineWidth" min="1" max="20" value="2">
-                        <span id="lineWidthValue">2</span>
-                    </div>
-                    <div class="property-group">
-                        <label for="lineStyle">Line Style:</label>
-                        <select id="lineStyle">
-                            <option value="solid">Solid</option>
-                            <option value="dashed">Dashed</option>
-                            <option value="dotted">Dotted</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="tool-section">
-                    <h3>Selected Element</h3>
-                    <div id="elementInfo" class="element-info">
-                        <p>No element selected</p>
-                    </div>
-                    <div class="element-controls" style="display: none;">
-                        <button id="deleteBtn" class="btn btn-danger">Delete</button>
-                        <button id="duplicateBtn" class="btn btn-secondary">Duplicate</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="canvas-container">
-                <canvas id="drawingCanvas" width="800" height="600"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html> 
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
